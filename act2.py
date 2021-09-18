@@ -1,7 +1,36 @@
 import os
 
 
+class Empleado(): 
+    listE = []   # hacemos un vector.
+    def __init__(self):
+        self.emp = {} # Hacemos un diccionario           
+    
 
+    def añadirEmp(self):   # funcion para agregar empleados
+        print ("===> Añadiendo Empleado <====")
+        self.emp = {
+            "nombre": input("Digite el Nombre del empleado: => "),
+            "edad": input("Digite la edad del empleado: => "),
+            "Cargo": input("Digite el cargo del empleado: => "),    
+            "Salario": input("Digite el salario del empleado: => ") }     
+
+        # llamamos al vector para incluya la  lista por medio de append  
+        self.listE.append(self.emp) 
+
+
+
+    # funcion para mostar los empleados
+        
+    def mostrarEmp(self):
+        print ("===> Mostrando Empleados <====")
+        print(self.listE) 
+       # Mostramos la lista de empleados
+
+    # funcion para eliminar empleados
+    def eliminarEmp(self):
+        print ("===> Eliminando Empleado <====")
+        elim = str(input("Digite el nombre del empleados a eliminar: "))
 def main():
 
     cons = "s"
