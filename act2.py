@@ -1,6 +1,35 @@
 import os
 
+# Hacemos la clase Persona
+class Persona(): 
+    listP = []   # hacemos un vector.
+    def __init__(self):
+        self.person = {} # Hacemos un diccionario           
+    
 
+    def añadirPe(self):   # funcion para agregar Personas
+        print ("===> Añadiendo Persona <====")
+        self.person = {
+            "nombre": input("Digite el Nombre: => "),
+            "edad": input("Digite la edad: => "),
+            "hobbie": input("Digite su hobbie: => ") }     
+
+        # llamamos al vector para incluya la  lista por medio de append  
+        self.listP.append(self.person) 
+
+
+
+    # funcion para mostar los Personas
+    
+    def mostrarPe(self):
+        print ("===> Mostrando Personas <====")
+        print(self.listP) 
+       # Mostramos la lista de Personas
+
+    # funcion para eliminar Personas
+    def eliminarPe(self):
+        print ("===> Eliminando Persona <====")
+        elim = str(input("Digite el nombre de la Persona a eliminar: "))
 
 def main():
 
