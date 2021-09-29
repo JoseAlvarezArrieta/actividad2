@@ -28,8 +28,12 @@ class Persona():
 
     # funcion para eliminar Personas
     def eliminarPe(self):
-        print ("===> Eliminando Persona <====")
-        elim = str(input("Digite el nombre de la Persona a eliminar: "))
+        if len(self.person) == 0:
+            print("No hay nada para eliminar.")
+        else:
+            self.nom = input("Ingrese el nombre de la persona que desea eliminar => ")
+            if (self.nom in self.person):
+                print(f"Se eliminó {self.person.pop(self.nom)}")
 
 def main():
 
