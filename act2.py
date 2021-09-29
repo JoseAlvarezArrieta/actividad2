@@ -29,8 +29,13 @@ class Empleado():
 
     # funcion para eliminar empleados
     def eliminarEmp(self):
-        print ("===> Eliminando Empleado <====")
-        elim = str(input("Digite el nombre del empleados a eliminar: "))
+        if len(self.person) == 0:
+            print("No hay nada para eliminar.")
+        else:
+            self.emp = input("Ingrese el nombre de la persona que desea eliminar => ")
+            if (self.emp in self.person):
+                print(f"Se eliminó {self.person.pop(self.emp)}")
+        
 def main():
 
     cons = "s"
